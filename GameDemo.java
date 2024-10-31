@@ -8,7 +8,6 @@ public class GameDemo {
     public static void main(String[] args) {
         Character character = new Character();
 
-        // Пример использования State паттерна
         character.setState(new NormalState());
         character.attack();
 
@@ -18,7 +17,8 @@ public class GameDemo {
         character.setState(new DefeatedState());
         character.attack();
 
-        // Пример использования Strategy паттерна
+
+
         character.setStrategy(new MeleeStrategy());
         character.fight();
 
@@ -28,7 +28,8 @@ public class GameDemo {
         character.setStrategy(new MagicStrategy());
         character.fight();
 
-        // Пример использования Template паттерна
+
+
         GameAction attack = new AttackAction();
         attack.executeAction();
 
@@ -38,7 +39,8 @@ public class GameDemo {
         GameAction heal = new HealAction();
         heal.executeAction();
 
-        // Пример использования Visitor паттерна
+
+
         BoostEffect boost = new BoostEffect();
         DamageEffect damage = new DamageEffect();
 
